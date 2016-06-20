@@ -15,4 +15,4 @@ You can start development server with
 npm run serve
 ```
 
-then visit http://localhost:8080/
+then visit http://localhost:8080/webpack-dev-server/

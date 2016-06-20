@@ -1,21 +1,25 @@
 module.exports = {
   entry: './src/app.js',
+  devtool: 'source-map',
   output: {
     path: 'dist/',
+    publicPath: '/dist/',
     filename: 'bundle.js'
   },
   module: {
     loaders: [
       {
-        test: /^src[\w\W]*\.js$/,
+        test: /\.js$/,
+        exclude: /node_modules/,
         loader: 'babel',
         query: {
           presets: ['es2015']
         }
       },
       {
-        test: /^src[\w\W]*\.scss$/,
-        loaders: ["style", "css", "sass"]
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        loaders: ['style', 'css?sourceMap', 'sass?sourceMap']
       }
     ]
   }
