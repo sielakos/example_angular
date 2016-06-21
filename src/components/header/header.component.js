@@ -1,3 +1,6 @@
+/**
+ * Header component. Displays name of application and top navigation
+ */
 export default {
   template: `
     <div class="header">
@@ -5,7 +8,7 @@ export default {
       <nav class="header__nav">
         <ul class="header__list">
           <li class="header__position">
-            <a class="header__link" href="#">List</a>
+            <a class="header__link" ui-sref="main.list({})">List</a>
           </li>
           <li class="header__position">
             <a class="header__link" href="#">Add new</a>

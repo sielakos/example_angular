@@ -4,18 +4,22 @@ import './app.scss';
 import AppComponent from './app.component';
 import components from './components';
 
+/**
+ * Main application module.
+ * It is mainly app component with few configuration options
+ */
 angular
   .module('app', [
     uiRouter,
     components
   ])
   .component('app', AppComponent)
-  .config(/* @ngInject */ ($stateProvider, $urlRouterProvider) => {
-    $stateProvider
-      .state('main', {
-        url: '/',
-        component: 'app'
-      });
+  .config(($stateProvider, $urlRouterProvider, $locationProvider) => {
+    $stateProvider.state('main', {
+      abstract: true,
+      component: 'app'
+    });
 
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/list/');
+    $locationProvider.html5Mode(true);
   });

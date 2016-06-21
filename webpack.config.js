@@ -22,5 +22,8 @@ module.exports = {
         loaders: ['style', 'css?sourceMap', 'sass?sourceMap']
       }
     ]
+  },
+  devServer: {
+    historyApiFallback: true
   }
 };

@@ -1,0 +1,27 @@
+.address {
+  display: flex;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border: {
+    top: 1px solid $color-light-green;
+    bottom: 1px solid $color-light-green;
+  }
+
+  &:hover {
+    background-color: $color-light-grey;
+  }
+}
+
+.address__name {
+  flex: 0 1 auto;
+  width: 15rem;
+}
+
+.address__email {
+  flex: 1 1 auto;
+}
+
+.address__country {
+  flex: 0 1 auto;
+  width: 15rem;
+}

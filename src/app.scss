@@ -1,5 +1,6 @@
-$color-diff: 20%;
+$color-diff: 20%; // Standard color difference used to calculate light and dark versions of base color
 
+// Colors
 $color-green: rgb(105, 209, 88);
 $color-light-green: lighten($color-green, $color-diff);
 $color-dark-green: darken($color-green, $color-diff);
@@ -8,9 +9,13 @@ $color-grey: rgb(168, 168, 168);
 $color-light-grey: lighten($color-grey, $color-diff);
 $color-dark-grey: darken($color-grey, $color-diff);
 
+$color-black: rgb(0, 0, 0);
+
+// Global styles used in application
 :root {
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
+  color: $color-black;
 }
 
 body {
@@ -24,8 +29,9 @@ h4 { font-size: 1.12rem; }
 h5 { font-size: .83rem; }
 h6 { font-size: .75rem; }
 
+// Styles for app component
 .app__content {
-  padding: 2rem;
+  padding: 0.5rem 2rem;
 }
 
 .app__footer {
@@ -40,4 +46,5 @@ h6 { font-size: .75rem; }
   text-align: center;
 }
 
+// Imports
 @import './components/components';
