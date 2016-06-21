@@ -4,11 +4,10 @@
 export default {
   template: `
     <header>
-      <h1>Address Book</h1>
     </header>
-    <div ui-view>Content</div>
-    <footer>
-        Author: Mariusz Sielski
+    <div class="app__content" ui-view>Content</div>
+    <footer class="app__footer">
+      Author: Mariusz Sielski
     </footer>
   `
 };

@@ -1,12 +1,20 @@
-$color-diff: 15%;
+$color-diff: 20%;
 
-$color-green: rgb(33, 167, 20);
+$color-green: rgb(105, 209, 88);
 $color-light-green: lighten($color-green, $color-diff);
 $color-dark-green: darken($color-green, $color-diff);
+
+$color-grey: rgb(168, 168, 168);
+$color-light-grey: lighten($color-grey, $color-diff);
+$color-dark-grey: darken($color-grey, $color-diff);
 
 :root {
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
 }
 
 h1 { font-size: 2rem; }
@@ -15,5 +23,21 @@ h3 { font-size: 1.17rem; }
 h4 { font-size: 1.12rem; }
 h5 { font-size: .83rem; }
 h6 { font-size: .75rem; }
+
+.app__content {
+  padding: 2rem;
+}
+
+.app__footer {
+  position: fixed;
+  bottom: 0;
+  padding: 0.5rem;
+  width: 100%;
+  color: $color-dark-grey;
+  background-color: $color-light-grey;
+  border-top: 1px solid $color-light-green;
+  font-size: 0.8rem;
+  text-align: center;
+}
 
 @import './components/components';

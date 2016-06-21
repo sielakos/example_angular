@@ -1,4 +1,33 @@
 .header {
+  background-color: $color-light-grey;
+}
+
+.header__title {
   text-align: center;
   color: $color-green;
+  margin: 0;
+  padding-top: 1rem;
+}
+
+.header__nav {
+  border-bottom: 1px solid $color-light-green;
+}
+
+.header__list {
+  list-style: none;
+}
+
+.header__position {
+  display: inline-block;
+}
+
+.header__link {
+  text-decoration: none;
+  color: $color-green;
+  padding: 1rem 2rem;
+
+  &:hover {
+    color: $color-dark-green;
+    border-bottom: 1px solid $color-dark-green;
+  }
 }
