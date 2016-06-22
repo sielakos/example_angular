@@ -2,6 +2,9 @@ import angular from 'angular';
 import header from './header';
 import addressList from './address-list';
 import address from './address';
+import addressForm from './address-form';
+import addAddress from './add-address';
+import fieldErrors from './field-errors';
 
 /**
  * Components module groups all components modules used in application, so they can be imported
@@ -11,6 +14,9 @@ export default angular
   .module('app.components', [
     header,
     addressList,
-    address
+    address,
+    addressForm,
+    addAddress,
+    fieldErrors
   ])
   .name;

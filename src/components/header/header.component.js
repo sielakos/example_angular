@@ -8,10 +8,10 @@ export default {
       <nav class="header__nav">
         <ul class="header__list">
           <li class="header__position">
-            <a class="header__link" ui-sref="main.list({})">List</a>
+            <a class="header__link" ui-sref="main.list({filter: ''})">List</a>
           </li>
           <li class="header__position">
-            <a class="header__link" href="#">Add new</a>
+            <a class="header__link" ui-sref="main.new">Add new</a>
           </li>
         </ul>
       </nav>
