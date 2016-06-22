@@ -20,6 +20,6 @@ angular
       component: 'app'
     });
 
-    $urlRouterProvider.otherwise('/list/');
+    $urlRouterProvider.otherwise('/list');
     $locationProvider.html5Mode(true);
   });

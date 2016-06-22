@@ -5,6 +5,7 @@ import address from './address';
 import addressForm from './address-form';
 import addAddress from './add-address';
 import fieldErrors from './field-errors';
+import editAddress from './edit-address';
 
 /**
  * Components module groups all components modules used in application, so they can be imported
@@ -17,6 +18,7 @@ export default angular
     address,
     addressForm,
     addAddress,
-    fieldErrors
+    fieldErrors,
+    editAddress
   ])
   .name;

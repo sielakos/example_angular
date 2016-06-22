@@ -7,14 +7,14 @@ let defaultAddresses = [
     firstName: 'Alan',
     lastName: 'Smith',
     email: 'alan.smith@smith.oryt',
-    country: 'Poland'
+    country: 'Germany'
   },
   {
     id: uuid.v4(),
     firstName: 'Alina',
     lastName: 'Smith',
     email: 'alina.smith@smith.oryt',
-    country: 'Poland'
+    country: 'Germany'
   },
   {
     id: uuid.v4(),
@@ -59,11 +59,35 @@ export default ($window) => {
     saveAddresses
   );
 
+  const editAddress = pipe(
+    (address) => {
+      return getAddresses()
+        .map((other) => other.id === address.id ? address : other);
+    },
+    saveAddresses
+  );
+
+  const deleteAddress = pipe(
+    (id) => {
+      return getAddresses()
+        .filter(({id: otherId}) => otherId !== id);
+    },
+    saveAddresses
+  );
+
+  const getAddress = (id) => {
+    return getAddresses()
+      .filter(({id: otherId}) => otherId === id)[0];
+  };
+
   ensureAddressBookIsntEmpty();
 
   return {
     getAddresses,
-    addAddress
+    addAddress,
+    editAddress,
+    deleteAddress,
+    getAddress
   };
 
   function ensureAddressBookIsntEmpty() {

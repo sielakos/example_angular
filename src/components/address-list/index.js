@@ -11,7 +11,7 @@ export default angular
   .component('addressList', AddressListComponent)
   .config(($stateProvider) => {
     $stateProvider.state('main.list', {
-      url: '/list/:filter',
+      url: '/list',
       component: 'addressList',
       resolve: {
         addresses: (addressList) => addressList.getAddresses()

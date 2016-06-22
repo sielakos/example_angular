@@ -6,7 +6,7 @@ class AddAddressController {
   
   onSave(address) {
     this.addressList.addAddress(address);
-    this.$state.go('main.list', {filter: ''});
+    this.$state.go('main.list');
   }
 }
 
